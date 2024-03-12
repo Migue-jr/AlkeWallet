@@ -1,0 +1,19 @@
+body {
+    padding: 20px; /* Espaciado alrededor del contenido para evitar pegado a los bordes */
+  }
+
+  .container {
+    max-width: 600px; /* Limita el ancho máximo del contenedor para una mejor lectura */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Estilos para resaltar el elemento seleccionado */
+  .list-group-item.active {
+      background-color: #007bff; /* Color de fondo para el elemento activo */
+      color: #fff; /* Color de texto para el elemento activo */
+      cursor: pointer; /* Cambia el cursor para indicar que es seleccionable */
+  }

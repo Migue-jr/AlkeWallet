@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alke Wallet - Enviar Dinero</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="../css/sendMoneyStyle.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-center mb-4">Enviar Dinero</h2>
+    <!-- Formulario de búsqueda -->
+    <div class="form-group">
+      <label for="searchContact">Buscar en la agenda de transferencias:</label>
+      <input type="text" class="form-control" id="searchContact" placeholder="Buscar contacto">
+    </div>
+    <!-- Botón para abrir el formulario emergente -->
+    <button id="openModalButton" class="btn btn-primary btn-block mb-3">Agregar nuevo contacto</button>
+    <!-- Lista de contactos -->
+    <h3>Contactos</h3>
+    <ul id="contactList" class="list-group">
+      <li class="list-group-item">
+        <div class="contact-info">
+          <span class="contact-name">John Doe</span>
+          <span class="contact-details">CBU: 123456789, Alias: john.doe, Banco: ABC Bank</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="contact-info">
+          <span class="contact-name">Jane Smith</span>
+          <span class="contact-details">CBU: 987654321, Alias: jane.smith, Banco: XYZ Bank</span>
+        </div>
+      </li>
+    </ul>
+    <br/>
+    <!-- Botón para enviar dinero (inicialmente oculto) -->
+    <button id="sendMoneyButton" class="btn btn-primary btn-block mb-3" style="display: none;">Enviar dinero</button>
+    <!-- Volver al menú principal -->
+    <a href="menu.html" class="btn btn-secondary btn-block mt-3">Volver al Menú Principal</a>
+    <!-- Mensaje de confirmación de envío de dinero -->
+    <div id="confirmationMessage" class="alert alert-success mt-3" style="display: none;">El dinero se ha enviado correctamente.</div>
+  </div>
+  <!-- Modal para agregar nuevo contacto -->
+  <div class="modal fade" id="addContactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agregar nuevo contacto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="addContactForm">
+            <div class="form-group">
+              <label for="fullNameModal">Nombre y Apellido:</label>
+              <input type="text" class="form-control" id="fullNameModal" placeholder="Ingrese nombre y apellido" required>
+            </div>
+            <div class="form-group">
+              <label for="cbuModal">Número de CBU:</label>
+              <input type="text" class="form-control" id="cbuModal" placeholder="Ingrese número de CBU" required>
+            </div>
+            <div class="form-group">
+              <label for="aliasModal">Alias:</label>
+              <input type="text" class="form-control" id="aliasModal" placeholder="Ingrese alias" required>
+            </div>
+            <div class="form-group">
+              <label for="bankNameModal">Nombre del Banco:</label>
+              <input type="text" class="form-control" id="bankNameModal" placeholder="Ingrese nombre del banco" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button id="saveContactModal" type="button" class="btn btn-primary">Guardar contacto</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- custom JavaScript file -->
+    <script src="../js/sendMoney.js"></script>
+</body>
+</html>

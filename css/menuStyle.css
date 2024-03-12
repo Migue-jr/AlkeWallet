@@ -1,0 +1,9 @@
+/*Estilos en línea específicos para menu.html */
+body {
+    padding: 20px; /* Espaciado alrededor del contenido de la página */
+  }
+
+  .container {
+    max-width: 400px; /* Limita el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+  }
